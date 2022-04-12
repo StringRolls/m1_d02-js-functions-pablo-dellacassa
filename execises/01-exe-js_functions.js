@@ -7,10 +7,30 @@
  * Hint: you can use the switch statement.
  */
 
-function doTheMath(){
-    // your code here ...
+function doTheMath(num1, sign, num2){
+    switch(sign){
+        case '+':
+            return num1 + num2; // a return breaks the code, its not neecessary to add break
+        case '-':
+            return num1 - num2;
+        case '*':
+            return num1 * num2;
+        case '/':
+            if(num2 === 0){
+                return 'Division by zero not allowed'
+            } else {
+                return num1 / num2;
+            }
+        case '%':
+            return num1 % num2
+        case '**':
+            return num1 ** num2
+        default: 
+        return 'Operation unknown!'
+    }
 }
 
+console.log("Let's do the math: ", doTheMath(2, "+", 3));
 
 /**
  * Create a function named isNameOddOrEven() that accepts a string as a parameter.
